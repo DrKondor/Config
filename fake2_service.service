@@ -10,5 +10,5 @@ ExecStart=/bin/echo I am starting the fake2 service
 ExecStop=/bin/echo I am stopping the fake2 service
 
 [Install]
-# Following line means the service should start after the system reaches multi-user mode
+# Following line means the service should start when the system reaches multi-user mode
 WantedBy=multi-user.target
