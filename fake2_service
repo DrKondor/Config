@@ -1,5 +1,8 @@
+# SystemD units should be made executable (chmod 755)
+
 [Unit]
 Description=fake2
+# Following line means the service should start only after the network does
 After=network.target
 
 [Service]
@@ -7,4 +10,5 @@ ExecStart=/bin/echo I am starting the fake2 service
 ExecStop=/bin/echo I am stopping the fake2 service
 
 [Install]
+# Following line means the service should start after the system reaches multi-user mode
 WantedBy=multi-user.target
